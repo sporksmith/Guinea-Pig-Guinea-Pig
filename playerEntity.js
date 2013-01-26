@@ -77,8 +77,8 @@ var PlayerEntity = FloaterEntity.extend({
 		// check for collision
 		var res = me.game.collide(this);
 		if (res) {
-			console.log("collission detected!");
-			console.log(res);
+			//console.log("collision detected!");
+			//console.log(res);
 		}
 		return this.parent(this);
 	}

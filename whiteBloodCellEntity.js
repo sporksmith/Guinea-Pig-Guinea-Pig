@@ -10,7 +10,7 @@ var WhiteBloodCellEntity = FloaterEntity.extend({
 		settings.spritewidth = 64;
 		settings.spriteheight = 64;
 		this.parent(x, y, settings);
-		this.collidable=false;
+		this.collidable=true;
 
 		// this actually sets the default acceleration values
 		this.setVelocity(1, 5);
@@ -24,6 +24,7 @@ var WhiteBloodCellEntity = FloaterEntity.extend({
 	// this function is called by the engine, when
 	// an object is touched by something (here collected)
 	onCollision: function() {
+		console.log("onCollision - arg ct = "+arguments.length);
 		this.collidable = false;
 		// remove it
 		me.game.remove(this);
