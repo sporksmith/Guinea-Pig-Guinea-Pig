@@ -71,7 +71,7 @@ var FloaterEntity = me.ObjectEntity.extend({
 	update: function(){
 		var result=false;
 		//update velocity in direction of heartbeat
-		this.vel.x+=0.5*heartbeat;
+		this.vel.x+=2.0*heartbeat;
 		// check & update player movement
 		var collision = this.updateMovement();
 		if(collision.x!=0||collision.y!=0){
