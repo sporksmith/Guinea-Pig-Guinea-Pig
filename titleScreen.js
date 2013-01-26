@@ -35,7 +35,7 @@ var TitleScreen = me.ScreenObject.extend(
 			this.scrollerfont.set("left");
 		}
 		// reset to default value
-		this.scrollerpos = 640;
+		this.scrollerpos = 1024;
 		
 		// a tween to animate the arrow
 		this.scrollertween = new me.Tween(this).to({scrollerpos: -2200 }, 10000).onComplete(this.scrollover.bind(this)).start();
