@@ -19,6 +19,7 @@ var WhiteBloodCellEntity = FloaterEntity.extend({
 		this.setFriction(0,0);
 		this.vel.x = Math.random()*10-5;
 		this.vel.y = Math.random()*10-5;
+		this.setAnimationFrame( Math.round( Math.random()*1000 ) );
 	},
  
 	// this function is called by the engine, when
