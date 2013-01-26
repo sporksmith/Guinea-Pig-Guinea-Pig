@@ -63,6 +63,7 @@ var jsApp = {
 
 /* the in game stuff*/
 var PlayScreen = (function(){
+	var costTimer = 0;
 	var spawntimer=0;
 	var spawnPoints = [];
 	return me.ScreenObject.extend(
@@ -98,8 +99,25 @@ var PlayScreen = (function(){
 				spawntimer=0;
 			}*/
 			
-			var randomCostIncrease = Math.random()*95;
-			//me.gamestat.add("score.cost",
+			var scoreCaught = me.gamestat.getItemValue("score.caught");
+			var scoreDestroyed = me.gamestat.getItemValue("score.destroyed");
+			var scoreEscaped = me.gamestat.getItemValue("score.escaped");
+			var scoreCost = me.gamestat.getItemValue("score.cost");
+			var scorePremium = me.gamestat.getItemValue("score.premium");
+			
+			if(++costTimer==85){
+				var randomCostIncrease = Math.random()*95;
+				scorePremium+=randomCostIncrease;
+				scoreCost+=randomCostIncrease*1.75;
+				costTimer = 0;
+			}
+			me.gamestat.setValue("score.cost",scoreCost);
+			me.gamestat.setValue("score.premium",scorePremium);
+			ScoreBoardElements["caught"].innerHTML = scoreCaught;
+			ScoreBoardElements["destroyed"].innerHTML = scoreDestroyed;
+			ScoreBoardElements["escaped"].innerHTML = scoreEscaped;
+			ScoreBoardElements["cost"].innerHTML = "$"+Math.round(scoreCost)+".95"
+			ScoreBoardElements["premium"].innerHTML = "$"+Math.round(scorePremium)+".95"
 		},
 		/* ---
 		 action to perform when game is finished (state change)
@@ -116,13 +134,18 @@ var PlayScreen = (function(){
 //bootstrap :)
 window.onReady(function() 
 {
-	PlayScreen.scoreBoardElements = {
+	
+	jsApp.onload();
+	
+});
+var ScoreBoardElements;
+window.addEventListener("load",function(){
+	console.log("onload");
+	ScoreBoardElements = {
 		caught:document.getElementById("caughtCounter"),
 		destroyed:document.getElementById("destroyedCounter"),
 		escaped:document.getElementById("escapedCounter"),
 		cost:document.getElementById("insurance.cost"),
 		premium:document.getElementById("insurance.premium")
 	}
-	jsApp.onload();
-	
-});
+},true);
