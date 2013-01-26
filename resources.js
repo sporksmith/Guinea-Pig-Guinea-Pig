@@ -35,6 +35,26 @@ var g_resources= [
 },
 // the parallax background
 {
+	name: "wall1",
+	type: "image",
+	src: "data/tiles/wall1.png"
+},
+{
+	name: "wall2",
+	type: "image",
+	src: "data/tiles/wall2.png"
+},
+{
+	name: "wall3",
+	type: "image",
+	src: "data/tiles/wall3.png"
+},
+{
+	name: "particles1",
+	type: "image",
+	src: "data/tiles/particles1.png"
+},
+{
 	name: "area01_bkg0",
 	type: "image",
 	src: "data/area01_parallax/area01_bkg0.png"
