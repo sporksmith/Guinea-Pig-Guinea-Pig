@@ -11,9 +11,9 @@ var PlayerEntity = FloaterEntity.extend({
 		this.parent(x, y, settings);
  
 		// this actually sets the default acceleration values
-		this.setVelocity(7, 5);
+		this.setVelocity(.1, 5);
 		//set max velocity
-		this.setMaxVelocity(10,20);
+		this.setMaxVelocity(5,20);
 		this.setFriction(0.02,0.02);
 
 		// define collision rectangle within sprite
@@ -42,6 +42,7 @@ var PlayerEntity = FloaterEntity.extend({
 			}
 		}
 		if (me.input.isKeyPressed('left')||(gamepad&&gamepad.axes[0]==-1)) {
+			console.log(me.timer.tick);
 			// face left
 			this.flipX(true);
 			// update the entity velocity
