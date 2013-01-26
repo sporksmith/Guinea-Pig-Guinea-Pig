@@ -1,0 +1,42 @@
+/*index.css*/
+body{
+	background-color:#000000;
+	color:white;
+}
+#jsapp{
+	width:640px;
+	float:left;
+	border: 2px white solid;
+	border-radius: 5px 5px 5px 5px;
+}
+#stats{
+	float:left;
+	color:white;
+	margin-left: 10px;
+}
+#healthometer, #insuranceometer{
+	border: 2px white solid;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	margin-bottom: 10px;
+}
+#stats h1, #stats h2, #stats h3{
+	font-weight: bold;
+	font-family: sans-serif;
+	border-bottom: 2px pink solid;
+	margin-bottom: 2px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#stats h1{
+	font-size: 14pt;
+}
+#stats h2{
+	font-size: 12pt;
+	font-family: monospace;
+}
+#stats h3{
+	font-size: 10pt;
+	text-align: right;
+}
+

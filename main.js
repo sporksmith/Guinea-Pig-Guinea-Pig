@@ -76,6 +76,11 @@ var PlayScreen = (function(){
 			// add a default HUD to the game mngr
 			me.game.addHUD(0, 430, 640, 60); 
 			me.game.sort();
+			me.gamestat.add("score.caught",0);
+			me.gamestat.add("score.destroyed",0);
+			me.gamestat.add("score.escaped",0);
+			me.gamestat.add("score.cost",0);
+			me.gamestat.add("score.premium",2500);
 			//spawnPoints = me.game.getEntityByName("virusSpawnPoint");
 			//console.log(spawnPoints);
 			//me.audio.playTrack("DST-InertExponent");
@@ -92,6 +97,9 @@ var PlayScreen = (function(){
 				me.game.sort();
 				spawntimer=0;
 			}*/
+			
+			var randomCostIncrease = Math.random()*95;
+			//me.gamestat.add("score.cost",
 		},
 		/* ---
 		 action to perform when game is finished (state change)
@@ -108,5 +116,13 @@ var PlayScreen = (function(){
 //bootstrap :)
 window.onReady(function() 
 {
+	PlayScreen.scoreBoardElements = {
+		caught:document.getElementById("caughtCounter"),
+		destroyed:document.getElementById("destroyedCounter"),
+		escaped:document.getElementById("escapedCounter"),
+		cost:document.getElementById("insurance.cost"),
+		premium:document.getElementById("insurance.premium")
+	}
 	jsApp.onload();
+	
 });

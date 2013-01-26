@@ -14,6 +14,11 @@ var g_resources= [
 },
 // the main player spritesheet
 {
+	name: "guinea_pig",
+	type: "image",
+	src: "data/tiles/guinea_pig.png"
+},
+{
 	name: "gripe_run_right",
 	type: "image",
 	src: "data/sprite/gripe_run_right.png"
@@ -21,7 +26,7 @@ var g_resources= [
 {
 	name: "virusEntity",   //this matches the "image" property value for an object in tiled
 	type: "image",
-	src: "data/sprite/spinning_coin_gold.png"
+	src: "data/sprite/spinning_coin_green.png"
 },
 {
 	name: "whiteBloodCellEntity",   //this matches the "image" property value for an object in tiled
@@ -29,6 +34,26 @@ var g_resources= [
 	src: "data/sprite/wheelie_right.png"
 },
 // the parallax background
+{
+	name: "wall1",
+	type: "image",
+	src: "data/tiles/wall1.png"
+},
+{
+	name: "wall2",
+	type: "image",
+	src: "data/tiles/wall2.png"
+},
+{
+	name: "wall3",
+	type: "image",
+	src: "data/tiles/wall3.png"
+},
+{
+	name: "particles1",
+	type: "image",
+	src: "data/tiles/particles1.png"
+},
 {
 	name: "area01_bkg0",
 	type: "image",
