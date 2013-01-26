@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>melonJS - Tutorial</title>
+		<title>This study needs a few guinea pigs</title>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<script type="text/javascript" src="lib/melonJS-0.9.5.js"></script>
+		<script type="text/javascript" src="heartbeat.js"></script>
+		<script type="text/javascript" src="floaterEntity.js"></script>
+		<script type="text/javascript" src="playerEntity.js"></script>
+		<script type="text/javascript" src="whiteBloodCellEntity.js"></script>
+		<script type="text/javascript" src="virusEntity.js"></script>
+		<script type="text/javascript" src="virusSpawnPoint.js"></script>
+		<script type="text/javascript" src="titleScreen.js"></script>
+		<script type="text/javascript" src="resources.js"></script>
+		<script type="text/javascript" src="main.js"></script>
 	</head>
 	<body bgcolor="black">
-		<div id="info" style="width: 640px;">
+		<div>
 			<div id="jsapp">
 				<font color="#FFFFFF", style="position: absolute; font-size: 10px; font-family: Courier New">
 					<span id="framecounter">(0/0 fps)</span>
 				</font>
-				<script type="text/javascript" src="lib/melonJS-0.9.5.js"></script>
-				<script type="text/javascript" src="heartbeat.js"></script>
-				<script type="text/javascript" src="floaterEntity.js"></script>
-				<script type="text/javascript" src="playerEntity.js"></script>
-				<script type="text/javascript" src="whiteBloodCellEntity.js"></script>
-				<script type="text/javascript" src="virusEntity.js"></script>
-				<script type="text/javascript" src="virusSpawnPoint.js"></script>
-				<script type="text/javascript" src="titleScreen.js"></script>
-				<script type="text/javascript" src="resources.js"></script>
-				<script type="text/javascript" src="main.js"></script>
 			</div>
+			<div id="stats">
+				<div id="healthometer">
+					<h1>Health-o-meter</h1>
+					<h2>Germs Cleaned</h2>
+					<h3><span id="caughtCounter">0</span></h3>
+					<h2>Germs Destroyed</h2>
+					<h3><span id="destroyedCounter">0</span></h3>
+					<h2>Germs Escaped</h2>
+					<h3><span id="escapedCounter">0</span></h3>
+				</div>
+				<div id="insuranceometer">
+					<h1>Insurance-o-meter</h1>
+					<h2>Out-Of-Pocket Costs</h2>
+					<h3><span id="insurance.cost">$0</span></h3>
+					<h2>New Premium</h2>
+					<h3><span id="insurance.premium">$2500.00</span></h3>
+				</div>
+			</div>
+			<div style="clear:left;"></div>
 		</div>
 	</body>
 </html>
