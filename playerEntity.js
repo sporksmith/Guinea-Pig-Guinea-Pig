@@ -52,7 +52,8 @@ var PlayerEntity = FloaterEntity.extend({
 			// update the entity velocity
 			this.vel.x += this.accel.x * me.timer.tick;
 		} else {
-			this.vel.x = 0;
+			// leave velocity alone
+			//this.vel.x = 0;
 		}
 		if (me.input.isKeyPressed('down')||(gamepad&&gamepad.buttons[0])) {
 			// 
