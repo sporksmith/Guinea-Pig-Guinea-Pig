@@ -44,7 +44,7 @@ var jsApp = {
 	 
 		// add our player entity in the entity pool
 		me.entityPool.add("mainPlayer", PlayerEntity);
-		
+		me.entityPool.add("whiteBloodCellEntity", WhiteBloodCellEntity);
 		me.entityPool.add("virusEntity", VirusEntity);
 		me.entityPool.add("virusSpawnPoint", VirusSpawnPoint);
 		
@@ -76,8 +76,8 @@ var PlayScreen = (function(){
 			// add a default HUD to the game mngr
 			me.game.addHUD(0, 430, 640, 60); 
 			me.game.sort();
-			spawnPoints = me.game.getEntityByName("virusSpawnPoint");
-			console.log(spawnPoints);
+			//spawnPoints = me.game.getEntityByName("virusSpawnPoint");
+			//console.log(spawnPoints);
 			//me.audio.playTrack("DST-InertExponent");
 		},
 		update: function(){

@@ -1,4 +1,4 @@
-var VirusEntity = FloaterEntity.extend({
+var WhiteBloodCellEntity = FloaterEntity.extend({
 	// extending the init function is not mandatory
 	// unless you need to add some extra initialization
 	init: function(x, y, settings) {
@@ -6,15 +6,16 @@ var VirusEntity = FloaterEntity.extend({
 			settings={};
 		}
 		// call the parent constructor
-		settings.image = "virusEntity";
-		settings.spritewidth = 32;
+		settings.image = "whiteBloodCellEntity";
+		settings.spritewidth = 64;
+		settings.spriteheight = 64;
 		this.parent(x, y, settings);
-		this.collidable=true;
+		this.collidable=false;
 
 		// this actually sets the default acceleration values
 		this.setVelocity(1, 5);
 		//set max velocity
-		this.setMaxVelocity(2,20);
+		this.setMaxVelocity(1,10);
 		this.setFriction(0,0);
 		this.vel.x = Math.random()*10-5;
 		this.vel.y = Math.random()*10-5;
