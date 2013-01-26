@@ -7,8 +7,8 @@ var WhiteBloodCellEntity = FloaterEntity.extend({
 		}
 		// call the parent constructor
 		settings.image = "whiteBloodCellEntity";
-		settings.spritewidth = 64;
-		settings.spriteheight = 64;
+		settings.spritewidth = 160;
+		settings.spriteheight = 160;
 		this.parent(x, y, settings);
 		this.collidable=true;
 

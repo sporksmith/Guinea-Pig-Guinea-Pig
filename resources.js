@@ -31,7 +31,7 @@ var g_resources= [
 {
 	name: "whiteBloodCellEntity",   //this matches the "image" property value for an object in tiled
 	type: "image",
-	src: "data/sprite/wheelie_right.png"
+	src: "data/sprite/white_blood_cell.png"
 },
 // the parallax background
 {
