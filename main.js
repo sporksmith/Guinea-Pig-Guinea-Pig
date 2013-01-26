@@ -44,7 +44,10 @@ var jsApp = {
 	 
 		// add our player entity in the entity pool
 		me.entityPool.add("mainPlayer", PlayerEntity);
-	 
+		
+		me.entityPool.add("virusEntity", VirusEntity);
+		me.entityPool.add("virusSpawnPoint", VirusSpawnPoint);
+		
 		// enable the keyboard
 		me.input.bindKey(me.input.KEY.LEFT, "left");
 		me.input.bindKey(me.input.KEY.RIGHT, "right");
@@ -59,26 +62,47 @@ var jsApp = {
 }; // jsApp
 
 /* the in game stuff*/
-var PlayScreen = me.ScreenObject.extend(
-{
-
-	onResetEvent: function() {	
-		// stuff to reset on state change
-		me.levelDirector.loadLevel("area01");
-		// add a default HUD to the game mngr
-		me.game.addHUD(0, 430, 640, 60); 
-		me.game.sort();
-		//me.audio.playTrack("DST-InertExponent");
-	},
-	/* ---
-	 action to perform when game is finished (state change)
-	---*/
-	onDestroyEvent: function() {
-		// remove the HUD
-		me.game.disableHUD();
-		//me.audio.stopTrack();
-	}
-});
+var PlayScreen = (function(){
+	var spawntimer=0;
+	var spawnPoints = [];
+	return me.ScreenObject.extend(
+	{
+		init: function(){
+			this.parent(true);
+		},
+		onResetEvent: function() {	
+			// stuff to reset on state change
+			me.levelDirector.loadLevel("area01");
+			// add a default HUD to the game mngr
+			me.game.addHUD(0, 430, 640, 60); 
+			me.game.sort();
+			spawnPoints = me.game.getEntityByName("virusSpawnPoint");
+			console.log(spawnPoints);
+			//me.audio.playTrack("DST-InertExponent");
+		},
+		update: function(){
+			/*
+			if(++spawntimer==45){
+				console.log("screen update: adding a new virus!");
+				// create a new object
+				var obj = new VirusEntity(16, 16)
+				// add the object and give the z index of the current object
+				me.game.add(obj,3);
+				// sort the object list (to ensure the object is properly displayed)
+				me.game.sort();
+				spawntimer=0;
+			}*/
+		},
+		/* ---
+		 action to perform when game is finished (state change)
+		---*/
+		onDestroyEvent: function() {
+			// remove the HUD
+			me.game.disableHUD();
+			//me.audio.stopTrack();
+		}
+	});
+})();
 //me.debug.renderHitBox = true;
 
 //bootstrap :)

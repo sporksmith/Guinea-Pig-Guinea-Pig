@@ -17,7 +17,12 @@ var g_resources= [
 	name: "gripe_run_right",
 	type: "image",
 	src: "data/sprite/gripe_run_right.png"
-}, 
+},
+{
+	name: "virusEntity",   //this matches the "image" property value for an object in tiled
+	type: "image",
+	src: "data/sprite/spinning_coin_gold.png"
+},
 // the parallax background
 {
 	name: "area01_bkg0",

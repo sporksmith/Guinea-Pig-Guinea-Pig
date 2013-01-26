@@ -68,6 +68,125 @@
    </properties>
   </object>
  </objectgroup>
+ <objectgroup color="#739ea4" name="virus_entities" width="40" height="15">
+  <properties>
+   <property name="image" value="virusEntity"/>
+   <property name="spriteheight" value="32"/>
+   <property name="spritewidth" value="32"/>
+  </properties>
+  <object name="virusEntity" x="288" y="96" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="96" y="224" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="416" y="64" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="448" y="192" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="960" y="192" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="192" y="192" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="928" y="64" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="736" y="192" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="896" y="128" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="544" y="96" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="128" y="320" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="288" y="256" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="128" y="96" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="704" y="64" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="640" y="192" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="virusEntity" x="1088" y="96" width="32" height="32">
+   <properties>
+    <property name="image" value="virusEntity"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer name="foreground" width="40" height="15">
   <data encoding="base64">
    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABRAAAAUgAAAFMAAABUAAAAVQAAAFYAAABXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZQAAAAAAAABnAAAAaAAAAGkAAABrAAAAawAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAHkAAAB6AAAAewAAAHsAAAB7AAAAfAAAAH0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAAAABAAAAAUAAAAWAAAAAAAAABgAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAZAAAACgAAAAsAAAAYAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAGQAAAB4AAAAfAAAAGAAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAADAAAAKgAAACoAAAAqAAAAKgAAACoAAAAqAAAAKgAAACoAAAAqAAAAKgAAAAMAAAADAAAAAwAAAAMAAAAGAAAABgAAAAMAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -84,6 +203,16 @@
     <property name="duration" value="250"/>
     <property name="fade" value="#000000"/>
     <property name="to" value="area02"/>
+   </properties>
+  </object>
+  <object name="virusSpawnPoint" x="0" y="32" width="32" height="32">
+   <properties>
+    <property name="spawntick" value="60"/>
+   </properties>
+  </object>
+  <object name="virusSpawnPoint" x="0" y="128" width="32" height="32">
+   <properties>
+    <property name="spawntick" value="45"/>
    </properties>
   </object>
  </objectgroup>
