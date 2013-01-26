@@ -21,6 +21,9 @@ var PlayerEntity = FloaterEntity.extend({
  
 		// set the display to follow our position on both axis
 		me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
+
+		// follow precisely to emphasize 'drift'
+		me.game.viewport.setDeadzone(0, 0);
 	},
 	/* -----
 	update the player pos
