@@ -53,7 +53,7 @@ var TitleScreen = me.ScreenObject.extend(
 	scrollover : function()
 	{
 		// reset to default value
-		this.scrollerpos = 640;
+		this.scrollerpos = 1024;
 		this.scrollertween.to({scrollerpos: -2200 }, 10000).onComplete(this.scrollover.bind(this)).start();
 	},
 		
@@ -82,8 +82,8 @@ var TitleScreen = me.ScreenObject.extend(
 	{
 		context.drawImage(this.title, 0,0);
 		
-		this.font.draw (context, "PRESS ENTER TO PLAY",	 20, 240);
-		this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 440);
+		this.font.draw (context, "PRESS ENTER TO PLAY",	 200, 768/2);
+		this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 768-200);
 	},
 	
 	/*---
