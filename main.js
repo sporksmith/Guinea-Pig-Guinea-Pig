@@ -47,6 +47,7 @@ var jsApp = {
 		me.entityPool.add("whiteBloodCellEntity", WhiteBloodCellEntity);
 		me.entityPool.add("virusEntity", VirusEntity);
 		me.entityPool.add("virusSpawnPoint", VirusSpawnPoint);
+		me.entityPool.add("whiteBloodCellSpawnPoint", WhiteBloodCellSpawnPoint);
 		
 		// enable the keyboard
 		me.input.bindKey(me.input.KEY.LEFT, "left");

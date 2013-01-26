@@ -1,4 +1,4 @@
-var VirusEntity = FloaterEntity.extend({
+var CleanVirusEntity = FloaterEntity.extend({
 	// extending the init function is not mandatory
 	// unless you need to add some extra initialization
 	init: function(x, y, settings) {
@@ -6,7 +6,7 @@ var VirusEntity = FloaterEntity.extend({
 			settings={};
 		}
 		// call the parent constructor
-		settings.image = "virusEntity";
+		settings.image = "cleanVirusEntity";
 		settings.spritewidth = 32;
 		this.parent(x, y, settings);
 		this.collidable=true;

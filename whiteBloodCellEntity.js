@@ -19,15 +19,18 @@ var WhiteBloodCellEntity = FloaterEntity.extend({
 		this.setFriction(0,0);
 		this.vel.x = Math.random()*10-5;
 		this.vel.y = Math.random()*10-5;
+		this.health=20;
 	},
  
 	// this function is called by the engine, when
 	// an object is touched by something (here collected)
-	onCollision: function() {
-		console.log("onCollision - arg ct = "+arguments.length);
-		this.collidable = false;
-		// remove it
-		me.game.remove(this);
+	onCollision: function(ref,obj) {
+		if(obj.name=="mainPlayer"){
+			this.collidable = false;
+			me.game.remove(this);
+		}else{
+			console.log("white blood cell collided with "+obj.name);
+		}
 	},
 	
 	update: function(){
@@ -37,6 +40,19 @@ var WhiteBloodCellEntity = FloaterEntity.extend({
 			})
 			me.game.remove(this);
 		} else {
+			var res = me.game.collide(this);
+			if(res&&res.obj&&res.obj.name!="mainPlayer"){
+				console.log("whiteBloodCell collided with "+res.obj.name);
+				if(res.obj.name=="virusentity"){
+					this.health=this.health-1;
+					if(this.health==0){
+						this.collidable=false;
+						this.flicker(60,function(){
+							me.game.remove(this);
+						});
+					}
+				}
+			}
 			this.parent();
 		}
 	}
