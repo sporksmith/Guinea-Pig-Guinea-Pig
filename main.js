@@ -7,7 +7,7 @@ var jsApp = {
 	onload: function()
 	{
 		// init the video
-		if (!me.video.init('jsapp', 640, 480, false, 1.0))
+		if (!me.video.init('jsapp', 1024, 768, false, 1.0))
 		{
 			alert("Sorry but your browser does not support html 5 canvas.");
 			return;
@@ -76,7 +76,7 @@ var PlayScreen = (function(){
 			// stuff to reset on state change
 			me.levelDirector.loadLevel("area01");
 			// add a default HUD to the game mngr
-			me.game.addHUD(0, 430, 640, 60); 
+			//me.game.addHUD(0, 430, 640, 60); 
 			me.game.sort();
 			me.gamestat.add("score.caught",0);
 			me.gamestat.add("score.destroyed",0);
@@ -125,7 +125,7 @@ var PlayScreen = (function(){
 		---*/
 		onDestroyEvent: function() {
 			// remove the HUD
-			me.game.disableHUD();
+			//me.game.disableHUD();
 			//me.audio.stopTrack();
 		}
 	});
