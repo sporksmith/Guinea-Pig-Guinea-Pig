@@ -188,13 +188,16 @@
 				 * @param {axis} [axis="AXIS.BOTH"] AXIS.HORIZONTAL, AXIS.VERTICAL, AXIS.BOTH
 				 */
 
-				follow : function(target, axis) {
+				follow : function(target, axis, target_offset) {
 					if (target instanceof me.ObjectEntity)
 						this.target = target.pos;
 					else if (target instanceof me.Vector2d)
 						this.target = target;
 					else
 						throw "melonJS: invalid target for viewport.follow";
+
+                    this.target_offset = target_offset || new me.Vector2d(0,0);
+
 					// if axis is null, camera is moved on target center
 					this.follow_axis = axis || this.AXIS.BOTH;
 					
@@ -218,24 +221,27 @@
 
 				/** @private */
 				update : function(updateTarget) {
-
 					if (this.target && updateTarget) {
+                        //var target = this.target.copy();
+                        //target.add( this.target_offset );
+                        var target = new me.Vector2d( this.target.x + this.target_offset.x, this.target.y + this.target_offset.y );
+
 						switch (this.follow_axis) {
 						case this.AXIS.NONE:
 							//this.focusOn(this.target);
 							break;
 
 						case this.AXIS.HORIZONTAL:
-							updateTarget = this._followH(this.target);
+							updateTarget = this._followH(target);
 							break;
 
 						case this.AXIS.VERTICAL:
-							updateTarget = this._followV(this.target);
+							updateTarget = this._followV(target);
 							break;
 
 						case this.AXIS.BOTH:
-							updateTarget = this._followH(this.target);
-							updateTarget = this._followV(this.target) || updateTarget;
+							updateTarget = this._followH(target);
+							updateTarget = this._followV(target) || updateTarget;
 							break;
 
 						default:
