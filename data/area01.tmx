@@ -61,10 +61,11 @@
    <property name="spriteheight" value=""/>
    <property name="spritewidth" value="64"/>
   </properties>
-  <object name="mainPlayer" x="34" y="98" width="30" height="62">
+  <object name="mainPlayer" x="34" y="98" width="64" height="32">
    <properties>
-    <property name="image" value="gripe_run_right"/>
-    <property name="spritewidth" value="64"/>
+    <property name="image" value="guinea_pig"/>
+    <property name="spriteheight" value="64"/>
+    <property name="spritewidth" value="128"/>
    </properties>
   </object>
  </objectgroup>

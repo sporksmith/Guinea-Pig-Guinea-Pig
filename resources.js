@@ -14,6 +14,11 @@ var g_resources= [
 },
 // the main player spritesheet
 {
+	name: "guinea_pig",
+	type: "image",
+	src: "data/tiles/guinea_pig.png"
+},
+{
 	name: "gripe_run_right",
 	type: "image",
 	src: "data/sprite/gripe_run_right.png"

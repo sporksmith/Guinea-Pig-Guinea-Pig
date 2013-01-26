@@ -17,7 +17,7 @@ var PlayerEntity = FloaterEntity.extend({
 		this.setFriction(0.02,0.02);
 
 		// define collision rectangle within sprite
-		this.updateColRect(8, 48, -1, 0);
+		//this.updateColRect(8, 48, -1, 0);
  
 		// set the display to follow our position on both axis
 		me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
