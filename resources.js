@@ -31,23 +31,13 @@ var g_resources= [
 {
 	name: "whiteBloodCellEntity",   //this matches the "image" property value for an object in tiled
 	type: "image",
-	src: "data/sprite/wheelie_right.png"
+	src: "data/sprite/white_blood_cell.png"
 },
 // the parallax background
 {
-	name: "wall1",
+	name: "background",
 	type: "image",
-	src: "data/tiles/wall1.png"
-},
-{
-	name: "wall2",
-	type: "image",
-	src: "data/tiles/wall2.png"
-},
-{
-	name: "wall3",
-	type: "image",
-	src: "data/tiles/wall3.png"
+	src: "data/tiles/background.png"
 },
 {
 	name: "particles1",
