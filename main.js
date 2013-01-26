@@ -83,6 +83,7 @@ var PlayScreen = (function(){
 			me.gamestat.add("score.escaped",0);
 			me.gamestat.add("score.cost",0);
 			me.gamestat.add("score.premium",2500);
+			me.gamestat.add("endurance",0);
 			//spawnPoints = me.game.getEntityByName("virusSpawnPoint");
 			//console.log(spawnPoints);
 			//me.audio.playTrack("DST-InertExponent");
@@ -105,6 +106,7 @@ var PlayScreen = (function(){
 			var scoreEscaped = me.gamestat.getItemValue("score.escaped");
 			var scoreCost = me.gamestat.getItemValue("score.cost");
 			var scorePremium = me.gamestat.getItemValue("score.premium");
+			var scoreEndurance = me.gamestat.getItemValue("endurance");
 			
 			if(++costTimer==85){
 				var randomCostIncrease = Math.random()*95;
@@ -117,6 +119,7 @@ var PlayScreen = (function(){
 			ScoreBoardElements["caught"].innerHTML = scoreCaught;
 			ScoreBoardElements["destroyed"].innerHTML = scoreDestroyed;
 			ScoreBoardElements["escaped"].innerHTML = scoreEscaped;
+			ScoreBoardElements["endurance"].innerHTML = scoreEndurance;
 			ScoreBoardElements["cost"].innerHTML = "$"+Math.round(scoreCost)+".95"
 			ScoreBoardElements["premium"].innerHTML = "$"+Math.round(scorePremium)+".95"
 		},
@@ -146,6 +149,7 @@ window.addEventListener("load",function(){
 		caught:document.getElementById("caughtCounter"),
 		destroyed:document.getElementById("destroyedCounter"),
 		escaped:document.getElementById("escapedCounter"),
+		endurance:document.getElementById("enduranceCounter"),
 		cost:document.getElementById("insurance.cost"),
 		premium:document.getElementById("insurance.premium")
 	}

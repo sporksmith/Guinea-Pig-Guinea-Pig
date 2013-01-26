@@ -28,7 +28,7 @@ var VirusEntity = FloaterEntity.extend({
 			me.game.remove(this);
 			me.gamestat.add("score.caught",1);
 		}else{
-			console.log("virus collided with "+obj.name);
+			//console.log("virus collided with "+obj.name);
 		}
 	},
 	

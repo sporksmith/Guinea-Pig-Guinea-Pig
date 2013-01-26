@@ -42,7 +42,7 @@ var WhiteBloodCellEntity = FloaterEntity.extend({
 		} else {
 			var res = me.game.collide(this);
 			if(res&&res.obj&&res.obj.name!="mainPlayer"){
-				console.log("whiteBloodCell collided with "+res.obj.name);
+				//console.log("whiteBloodCell collided with "+res.obj.name);
 				if(res.obj.name=="virusentity"){
 					this.health=this.health-1;
 					if(this.health==0){
