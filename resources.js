@@ -23,6 +23,11 @@ var g_resources= [
 	type: "image",
 	src: "data/sprite/spinning_coin_gold.png"
 },
+{
+	name: "whiteBloodCellEntity",   //this matches the "image" property value for an object in tiled
+	type: "image",
+	src: "data/sprite/wheelie_right.png"
+},
 // the parallax background
 {
 	name: "area01_bkg0",
