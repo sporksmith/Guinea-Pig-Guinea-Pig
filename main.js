@@ -116,7 +116,8 @@ var PlayScreen = (function(){
 			}
 			me.gamestat.setValue("score.cost",scoreCost);
 			me.gamestat.setValue("score.premium",scorePremium);
-			ScoreBoardElements["caught"].innerHTML = scoreCaught;
+
+			/*
 			ScoreBoardElements["destroyed"].innerHTML = scoreDestroyed;
 			ScoreBoardElements["escaped"].innerHTML = scoreEscaped;
 			ScoreBoardElements["endurance"].innerHTML = scoreEndurance;
@@ -134,7 +135,9 @@ var PlayScreen = (function(){
 			} else {
 				me.state.change(me.state.GAME_OVER);
 			}
+			*/
 			
+			ScoreBoardElements["caught"].innerHTML = scoreCaught;
 			ScoreBoardElements["cost"].innerHTML = "$"+Math.round(scoreCost)+".95"
 			ScoreBoardElements["premium"].innerHTML = "$"+Math.round(scorePremium)+".95"
 			if(scoreCost>4000){
@@ -151,6 +154,9 @@ var PlayScreen = (function(){
 			me.audio.stopTrack();
 		},
 		repeat : function(s, count) { // this is a general utility. should probably be elsewhere :P
+			if (count <= 0) {
+				return "";
+			}
 			return (new Array(count + 1)).join(s);
 		},
 		draw : function(context)
