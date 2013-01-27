@@ -90,6 +90,10 @@ var PlayScreen = (function(){
 			me.gamestat.add("score.premium",2500);
 			me.gamestat.add("endurance",0);
 			me.gamestat.add("health",100);
+
+			this.font = new me.BitmapFont("16x16_font", 16);
+			this.font.set("left");
+
 			//spawnPoints = me.game.getEntityByName("virusSpawnPoint");
 			//console.log(spawnPoints);
 			updateHeartbeat(); // kick start the heart
@@ -145,6 +149,17 @@ var PlayScreen = (function(){
 			// remove the HUD
 			//me.game.disableHUD();
 			me.audio.stopTrack();
+		},
+		repeat : function(s, count) { // this is a general utility. should probably be elsewhere :P
+			return (new Array(count + 1)).join(s);
+		},
+		draw : function(context)
+		{
+			var scoreHealth = me.gamestat.getItemValue("health");
+			this.font.draw (context, this.repeat("I", Math.floor(scoreHealth/5)), me.game.viewport.pos.x, 0);
+
+			var scoreEndurance = me.gamestat.getItemValue("endurance");
+			this.font.draw (context, this.repeat("I", Math.floor(scoreEndurance/50)), me.game.viewport.pos.x, 20);
 		}
 	});
 })();

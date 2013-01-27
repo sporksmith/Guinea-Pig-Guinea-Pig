@@ -71,6 +71,11 @@ var g_resources= [
 	src: "data/sprite/32x32_font.png"
 },
 {
+	name: "16x16_font",
+	type: "image",
+	src: "data/sprite/16x16_font.png"
+},
+{
 	name: "title_screen",
 	type:"image",
 	src: "data/GUI/title_screen.png"
