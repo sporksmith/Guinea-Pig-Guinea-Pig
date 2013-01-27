@@ -6,6 +6,11 @@ var g_resources= [
 	type: "image",
 	src: "data/area01_tileset/area01_level_tiles.png"
 },
+{
+	name: "ggj_level_tiles",
+	type: "image",
+	src: "data/area01_tileset/ggj_level_tiles.png"
+},
 // our level
 {
 	name: "area01",
