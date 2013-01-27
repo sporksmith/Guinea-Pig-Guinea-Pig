@@ -16,8 +16,9 @@ function updateHeartbeat(){
 	heartbeat_idx = (heartbeat_idx + 1) % heartbeat_seq.length;
 	//console.log( heartbeat_idx, heartbeat_a, timeout );
 
+	me.audio.play("ba");
 	window.setTimeout(updateHeartbeat, timeout);
 }
-updateHeartbeat();
-//window.setTimeout(updateHeartbeat,1500);
+//updateHeartbeat();
+window.setTimeout(updateHeartbeat,1500);
 
