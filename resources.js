@@ -5,11 +5,6 @@ var baseVolume = 0.2;
 var g_resources= [
 // our level tileset
 {
-	name: "area01_level_tiles",
-	type: "image",
-	src: "data/area01_tileset/area01_level_tiles.png"
-},
-{
 	name: "ggj_level_tiles",
 	type: "image",
 	src: "data/area01_tileset/ggj_level_tiles.png"
@@ -51,16 +46,6 @@ var g_resources= [
 	name: "particles1",
 	type: "image",
 	src: "data/tiles/particles1.png"
-},
-{
-	name: "area01_bkg0",
-	type: "image",
-	src: "data/area01_parallax/area01_bkg0.png"
-},
-{
-	name: "area01_bkg1",
-	type: "image",
-	src: "data/area01_parallax/area01_bkg1.png"
 },
 {
 	name:"metatiles32x32",
