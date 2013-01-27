@@ -106,13 +106,14 @@ var PlayerEntity = FloaterEntity.extend({
 			moved=true;
 
 		}
-		if (me.input.isKeyPressed('shoot')){
+		if (me.input.isKeyPressed('shoot') && this.endurance > 7){
 			var laserEntity = new LaserEntity(this.pos.x+20, this.pos.y+5);
 			laserEntity.accel.x = 20;
 			laserEntity.vel.x = this.direction==-1?-20:20;
 			laserEntity.vel.y = 0;
 			me.game.add(laserEntity,3);
 			me.game.sort();
+			this.endurance-=8;
 		}
 		if(this.endurance<this.max_endurance&&!moved){
 			this.endurance = this.endurance + 10;

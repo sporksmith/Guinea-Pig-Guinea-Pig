@@ -41,18 +41,11 @@ var LaserEntity = me.ObjectEntity.extend({
 	},*/
 	update: function(){
 		this.pos.x = this.pos.x + this.vel.x*me.timer.tick;
-		//var collision = this.updateMovement();
 		var res = me.game.collide(this);
 		this.parent();
-		return true;
-		/*
-		if (!this.isFlickering()&&this.pos.x + this.vel.x > me.game.currentLevel.realwidth - this.width){
-			this.flicker(30,function(){
-				me.game.remove(this);
-			})
+		if(this.pos.x > me.game.viewport.pos.x + me.game.viewport.width){
 			me.game.remove(this);
-		} else {
-			this.parent();
-		}*/
+		}
+		return true;
 	}
 });
