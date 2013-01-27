@@ -46,7 +46,7 @@ var PlayerEntity = FloaterEntity.extend({
 			}
 		}
 		if (me.input.isKeyPressed('left')||(gamepad&&gamepad.axes[0]==-1)) {
-			console.log(me.timer.tick);
+			//console.log(me.timer.tick);
 			// face left
 			this.flipX(true);
 			this.direction=-1;
@@ -74,19 +74,19 @@ var PlayerEntity = FloaterEntity.extend({
 		if (me.input.isKeyPressed('down')||(gamepad&&gamepad.buttons[0])) {
 			// 
 			if(this.endurance-3>0){
-				console.log("move down: velY: "+this.vel.y+" accelY: "+this.accel.y+" tick: "+me.timer.tick);
+				//console.log("move down: velY: "+this.vel.y+" accelY: "+this.accel.y+" tick: "+me.timer.tick);
 				this.vel.y += this.accel.y * me.timer.tick;
 				if (this.vel.y > this.maxVel.y){
 					this.vel.y=this.maxVel.y;
 				}
-				console.log("move down result: velY: "+this.vel.y+" tick: "+me.timer.tick);
+				//console.log("move down result: velY: "+this.vel.y+" tick: "+me.timer.tick);
 				this.endurance-=3;
 			}
 			moved=true;
 		}
 		if (me.input.isKeyPressed('up')||(gamepad&&gamepad.buttons[1])) {
 			// increase upward speed unless already at max
-			console.log("move up: velY: "+this.vel.y+" accelY: "+this.accel.y+" tick: "+me.timer.tick);
+			//console.log("move up: velY: "+this.vel.y+" accelY: "+this.accel.y+" tick: "+me.timer.tick);
 			if(this.endurance-3>0){
 				this.vel.y -= this.accel.y * me.timer.tick;
 				if (this.vel.y < -1*this.maxVel.y){
@@ -109,6 +109,9 @@ var PlayerEntity = FloaterEntity.extend({
 		}
 		if(this.endurance<this.max_endurance&&!moved){
 			this.endurance = this.endurance + 10;
+			if(this.endurance > this.max_endurance){
+				this.endurance = this.max_endurance;
+			}
 		}
 		me.gamestat.setValue("endurance",this.endurance);
 		// check for collision

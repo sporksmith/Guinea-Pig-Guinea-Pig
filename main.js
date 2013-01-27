@@ -86,30 +86,21 @@ var PlayScreen = (function(){
 			me.gamestat.add("score.cost",0);
 			me.gamestat.add("score.premium",2500);
 			me.gamestat.add("endurance",0);
+			me.gamestat.add("health",100);
 			//spawnPoints = me.game.getEntityByName("virusSpawnPoint");
 			//console.log(spawnPoints);
 			//me.audio.playTrack("DST-InertExponent");
 			updateHeartbeat(); // kick start the heart
+			me.audio.playTrack("bangthataccordion");
 		},
 		update: function(){
-			/*
-			if(++spawntimer==45){
-				console.log("screen update: adding a new virus!");
-				// create a new object
-				var obj = new VirusEntity(16, 16)
-				// add the object and give the z index of the current object
-				me.game.add(obj,3);
-				// sort the object list (to ensure the object is properly displayed)
-				me.game.sort();
-				spawntimer=0;
-			}*/
-			
 			var scoreCaught = me.gamestat.getItemValue("score.caught");
 			var scoreDestroyed = me.gamestat.getItemValue("score.destroyed");
 			var scoreEscaped = me.gamestat.getItemValue("score.escaped");
 			var scoreCost = me.gamestat.getItemValue("score.cost");
 			var scorePremium = me.gamestat.getItemValue("score.premium");
 			var scoreEndurance = me.gamestat.getItemValue("endurance");
+			var scoreHealth = me.gamestat.getItemValue("health");
 			
 			if(++costTimer==85){
 				var randomCostIncrease = Math.random()*95;
@@ -123,6 +114,7 @@ var PlayScreen = (function(){
 			ScoreBoardElements["destroyed"].innerHTML = scoreDestroyed;
 			ScoreBoardElements["escaped"].innerHTML = scoreEscaped;
 			ScoreBoardElements["endurance"].innerHTML = scoreEndurance;
+			ScoreBoardElements["health"].innerHTML = scoreHealth;
 			ScoreBoardElements["cost"].innerHTML = "$"+Math.round(scoreCost)+".95"
 			ScoreBoardElements["premium"].innerHTML = "$"+Math.round(scorePremium)+".95"
 		},
@@ -132,7 +124,7 @@ var PlayScreen = (function(){
 		onDestroyEvent: function() {
 			// remove the HUD
 			//me.game.disableHUD();
-			//me.audio.stopTrack();
+			me.audio.stopTrack();
 		}
 	});
 })();
@@ -147,12 +139,13 @@ window.onReady(function()
 });
 var ScoreBoardElements;
 window.addEventListener("load",function(){
-	console.log("onload");
+	//console.log("onload");
 	ScoreBoardElements = {
 		caught:document.getElementById("caughtCounter"),
 		destroyed:document.getElementById("destroyedCounter"),
 		escaped:document.getElementById("escapedCounter"),
 		endurance:document.getElementById("enduranceCounter"),
+		health:document.getElementById("healthCounter"),
 		cost:document.getElementById("insurance.cost"),
 		premium:document.getElementById("insurance.premium")
 	}

@@ -31,7 +31,7 @@ var g_resources= [
 {
 	name: "virusEntity",   //this matches the "image" property value for an object in tiled
 	type: "image",
-	src: "data/sprite/spinning_coin_green.png"
+	src: "data/sprite/virus.png"
 },
 {
 	name: "whiteBloodCellEntity",   //this matches the "image" property value for an object in tiled
@@ -91,6 +91,12 @@ var g_resources= [
 	type: "audio",
 	src:  "data/audio/",
 	channel: 2,
+},
+{
+	name: "bangthataccordion",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 1,
 },
 ];
 
