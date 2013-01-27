@@ -151,6 +151,7 @@
 				for (var channel = 1; channel < sound_channel; channel++) {
 					// allocate the new additional channels
 					audio_channels[sound_id][channel] = new Audio( soundclip.src );
+					audio_channels[sound_id][channel].volume = soundclip.volume;
 					audio_channels[sound_id][channel].preload = 'auto';
 					audio_channels[sound_id][channel].load();
 				}
@@ -364,6 +365,9 @@
 				return 0;
 
 			var soundclip = new Audio(sound.src + sound.name + "." + activeAudioExt + me.nocache);
+			if (sound.volume) {
+				soundclip.volume = sound.volume;
+			}
 
 			soundclip.preload = 'auto';
 
