@@ -92,5 +92,11 @@ var g_resources= [
 	src:  "data/audio/",
 	channel: 2,
 },
+{
+	name: "bangthataccordion",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 1,
+},
 ];
 
