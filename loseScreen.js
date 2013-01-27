@@ -11,7 +11,7 @@ var LoseScreen = me.ScreenObject.extend(
 		this.scrollertween = null;
 		
 		this.scroller = "YOU'RE SO TIRED!";
-		this.scrollerpos = 600;
+		this.scrollerpos = 700;
 	},
 	/* ---
 		reset function
@@ -37,7 +37,7 @@ var LoseScreen = me.ScreenObject.extend(
 				.onComplete(this.scrollover.bind(this)).start();
 		
 		// enable the keyboard
-		//me.input.bindKey(me.input.KEY.ENTER, "enter", true);
+		me.input.bindKey(me.input.KEY.ENTER, "enter", true);
 	},
 	
 	
@@ -59,7 +59,7 @@ var LoseScreen = me.ScreenObject.extend(
 		// enter pressed ?
 		if (me.input.isKeyPressed('enter'))
 		{
-			me.state.change(me.state.PLAY);
+			me.state.change(me.state.MENU);
 		}
 		return true;
 	},
@@ -74,8 +74,8 @@ var LoseScreen = me.ScreenObject.extend(
 	{
 		context.drawImage(this.title, 0,0);
 		
-		this.font.draw (context, "OH NO!", 250, 768/2);
-		this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 768-200);
+		this.font.draw (context, "OH NO!", 440, 20);
+		this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 700);
 	},
 	
 	/*---

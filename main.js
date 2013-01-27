@@ -21,7 +21,7 @@ var jsApp = {
 		
 		// set all resources to be loaded
 		me.loader.preload(g_resources);
-
+		me.debug.displayFPS=false;
 		// load everything & display a loading screen
 		me.state.change(me.state.LOADING);
 				me.sys.gravity=0;
