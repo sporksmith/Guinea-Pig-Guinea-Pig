@@ -44,7 +44,7 @@ body{
 	text-align: right;
 }
 #stats .caution{
-	color: yellow;
+	color: orange;
 	font-size: 10pt;
 }
 #stats .warning{
@@ -58,7 +58,7 @@ body{
 	font-size: 12pt;
 }
 #stats .crisis{
-	color: fuchsia;
+	color: red;
 	font-weight: bold;
 	font-style: italic;
 	font-size: 14pt;
