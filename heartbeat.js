@@ -3,8 +3,8 @@ var heartbeat_a = 1; // current accel to apply
 
 // our base model
 var heartbeat_seq = [
-	{ 'a': -.4, 't': .5, 'audio': "ba" }, // 'ba-'
-	{ 'a': .4, 't': 1.5, 'audio': "bum" }, // '-bump!'
+	{ 'a': -.2, 't': .5, 'audio': "ba" }, // 'ba-'
+	{ 'a': .2, 't': 1.5, 'audio': "bum" }, // '-bump!'
 	{ 'a': 0.1, 't': 3}, // '---'
 	]
 var heartbeat_idx=0;
