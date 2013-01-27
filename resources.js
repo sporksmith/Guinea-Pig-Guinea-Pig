@@ -102,13 +102,13 @@ var g_resources= [
 	name: "sfx_gerbil_bounce_1",
 	type: "audio",
 	src:  "data/audio/",
-	channel: 1,
+	channel: 2,
 },
 {
 	name: "sfx_gerbil_bounce_2",
 	type: "audio",
 	src:  "data/audio/",
-	channel: 1,
+	channel: 2,
 },
 {
 	name: "sfx_gerbil_chomp_1",
