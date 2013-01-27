@@ -59,7 +59,7 @@ var WinScreen = me.ScreenObject.extend(
 		// enter pressed ?
 		if (me.input.isKeyPressed('enter'))
 		{
-			me.state.change(me.state.PLAY);
+			me.state.change(me.state.MENU);
 		}
 		return true;
 	},
