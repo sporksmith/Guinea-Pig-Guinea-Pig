@@ -35,7 +35,7 @@ var VirusEntity = FloaterEntity.extend({
 				this.collidable = false;
 				me.game.remove(this);
 				obj.flicker(30);
-				me.gamestat.setValue("health",me.gamestat.getItemValue("health")-1);
+				me.gamestat.setValue("health",me.gamestat.getItemValue("health")-10);
 				me.audio.play("sfx_whblcell_hurt");
 			}else if (obj.name=="laserentity"){
 				this.mode=this.FRIENDLY;
