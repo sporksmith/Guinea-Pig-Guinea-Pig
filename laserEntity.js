@@ -43,9 +43,18 @@ var LaserEntity = me.ObjectEntity.extend({
 		this.pos.x = this.pos.x + this.vel.x*me.timer.tick;
 		var res = me.game.collide(this);
 		this.parent();
+
 		if(this.pos.x > me.game.viewport.pos.x + me.game.viewport.width){
 			me.game.remove(this);
 		}
+
+		// check for collision
+		var map_collision = this.collisionMap.checkCollision(this.collisionBox, this.vel);
+		if (map_collision && map_collision.xtile) {
+			console.log(map_collision);
+			me.game.remove(this);
+		}
+
 		return true;
 	}
 });
