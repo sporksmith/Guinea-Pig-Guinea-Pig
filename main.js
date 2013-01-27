@@ -21,7 +21,7 @@ var jsApp = {
 		
 		// set all resources to be loaded
 		me.loader.preload(g_resources);
-
+		me.debug.displayFPS=false;
 		// load everything & display a loading screen
 		me.state.change(me.state.LOADING);
 				me.sys.gravity=0;
@@ -66,7 +66,7 @@ var jsApp = {
 	}
 
 }; // jsApp
-
+var firstRun=true;
 /* the in game stuff*/
 var PlayScreen = (function(){
 	var costTimer = 0;
@@ -96,8 +96,11 @@ var PlayScreen = (function(){
 
 			//spawnPoints = me.game.getEntityByName("virusSpawnPoint");
 			//console.log(spawnPoints);
-			updateHeartbeat(); // kick start the heart
-			window.setTimeout(function(){me.audio.playTrack("bangthataccordion");},5000);
+			if(firstRun){
+				firstRun=false;
+				updateHeartbeat(); // kick start the heart
+			}
+			window.setTimeout(function(){me.audio.playTrack("bangthataccordion");},0);
 		},
 		update: function(){
 			var scoreCaught = me.gamestat.getItemValue("score.caught");

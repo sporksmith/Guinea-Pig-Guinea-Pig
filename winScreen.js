@@ -11,7 +11,7 @@ var WinScreen = me.ScreenObject.extend(
 		this.scrollertween = null;
 		
 		this.scroller = "THE OPERATION WAS A SUCCESS!";
-		this.scrollerpos = 600;
+		this.scrollerpos = 700;
 	},
 	/* ---
 		reset function
@@ -20,7 +20,7 @@ var WinScreen = me.ScreenObject.extend(
 	onResetEvent : function()
 	{
 		if (this.title == null) {
-			this.title = me.loader.getImage("title_screen");
+			this.title = me.loader.getImage("win_screen");
 			this.font = new me.BitmapFont("32x32_font", 32);
 			this.font.set("left");
 			
@@ -37,7 +37,7 @@ var WinScreen = me.ScreenObject.extend(
 				.onComplete(this.scrollover.bind(this)).start();
 		
 		// enable the keyboard
-		//me.input.bindKey(me.input.KEY.ENTER, "enter", true);
+		me.input.bindKey(me.input.KEY.ENTER, "enter", true);
 	},
 	
 	
@@ -59,7 +59,7 @@ var WinScreen = me.ScreenObject.extend(
 		// enter pressed ?
 		if (me.input.isKeyPressed('enter'))
 		{
-			me.state.change(me.state.PLAY);
+			me.state.change(me.state.MENU);
 		}
 		return true;
 	},
@@ -74,8 +74,8 @@ var WinScreen = me.ScreenObject.extend(
 	{
 		context.drawImage(this.title, 0,0);
 		
-		this.font.draw (context, "CONGRATULATIONS!", 250, 768/2);
-		this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 768-200);
+		this.font.draw (context, "CONGRATULATIONS!", 250, 20);
+		this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 700);
 	},
 	
 	/*---
