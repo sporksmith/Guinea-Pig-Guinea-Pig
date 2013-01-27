@@ -91,7 +91,7 @@ var PlayScreen = (function(){
 			//console.log(spawnPoints);
 			//me.audio.playTrack("DST-InertExponent");
 			updateHeartbeat(); // kick start the heart
-			me.audio.playTrack("bangthataccordion");
+			window.setTimeout(function(){me.audio.playTrack("bangthataccordion");},10000);
 		},
 		update: function(){
 			var scoreCaught = me.gamestat.getItemValue("score.caught");
@@ -115,6 +115,18 @@ var PlayScreen = (function(){
 			ScoreBoardElements["escaped"].innerHTML = scoreEscaped;
 			ScoreBoardElements["endurance"].innerHTML = scoreEndurance;
 			ScoreBoardElements["health"].innerHTML = scoreHealth;
+			if(scoreHealth>75){
+				ScoreBoardElements["health"].className="";
+			} else if(scoreHealth>50){
+				ScoreBoardElements["health"].className="caution";
+			} else if(scoreHealth>25){
+				ScoreBoardElements["health"].className="warning";
+			} else if(scoreHealth>10){
+				ScoreBoardElements["health"].className="danger";
+			} else {
+				ScoreBoardElements["health"].className="crisis";
+			}
+			
 			ScoreBoardElements["cost"].innerHTML = "$"+Math.round(scoreCost)+".95"
 			ScoreBoardElements["premium"].innerHTML = "$"+Math.round(scorePremium)+".95"
 		},
@@ -133,7 +145,6 @@ var PlayScreen = (function(){
 //bootstrap :)
 window.onReady(function() 
 {
-	
 	jsApp.onload();
 	
 });
