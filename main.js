@@ -156,10 +156,10 @@ var PlayScreen = (function(){
 		draw : function(context)
 		{
 			var scoreHealth = me.gamestat.getItemValue("health");
-			this.font.draw (context, this.repeat("I", Math.floor(scoreHealth/5)), me.game.viewport.pos.x, 0);
+			this.font.draw (context, "HEALTH:   " + this.repeat("I", Math.floor(scoreHealth/5)), me.game.viewport.pos.x, 0);
 
 			var scoreEndurance = me.gamestat.getItemValue("endurance");
-			this.font.draw (context, this.repeat("I", Math.floor(scoreEndurance/50)), me.game.viewport.pos.x, 20);
+			this.font.draw (context, "STRENGTH: " + this.repeat("I", Math.floor(scoreEndurance/50)), me.game.viewport.pos.x, 20);
 		}
 	});
 })();
