@@ -1,4 +1,4 @@
-var WinScreen = me.ScreenObject.extend(
+var LoseScreen = me.ScreenObject.extend(
 {
 	init : function()
 	{
@@ -10,7 +10,7 @@ var WinScreen = me.ScreenObject.extend(
 		this.scrollerfont  =  null;
 		this.scrollertween = null;
 		
-		this.scroller = "THE OPERATION WAS A SUCCESS!";
+		this.scroller = "YOU'RE SO TIRED!";
 		this.scrollerpos = 600;
 	},
 	/* ---
@@ -74,7 +74,7 @@ var WinScreen = me.ScreenObject.extend(
 	{
 		context.drawImage(this.title, 0,0);
 		
-		this.font.draw (context, "CONGRATULATIONS!", 250, 768/2);
+		this.font.draw (context, "OH NO!", 250, 768/2);
 		this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 768-200);
 	},
 	

@@ -38,6 +38,8 @@ var jsApp = {
 	 
 		// set the "Play/Ingame" Screen Object
 		me.state.set(me.state.PLAY, new PlayScreen());
+		me.state.set(me.state.GAME_END, new WinScreen());
+		me.state.set(me.state.GAME_OVER, new LoseScreen());
 	 
 		// set a global fading transition for the screen
 		me.state.transition("fade", "#FFFFFF", 250);
@@ -48,13 +50,14 @@ var jsApp = {
 		me.entityPool.add("virusEntity", VirusEntity);
 		me.entityPool.add("virusSpawnPoint", VirusSpawnPoint);
 		me.entityPool.add("whiteBloodCellSpawnPoint", WhiteBloodCellSpawnPoint);
+		me.entityPool.add("winTransitionPoint", WinTransitionPoint);
 		me.entityPool.add("laserEntity", LaserEntity);
 		
 		// enable the keyboard
 		me.input.bindKey(me.input.KEY.LEFT, "left");
 		me.input.bindKey(me.input.KEY.RIGHT, "right");
-		me.input.bindKey(me.input.KEY.UP, "up", true);
-		me.input.bindKey(me.input.KEY.DOWN, "down", true);
+		me.input.bindKey(me.input.KEY.UP, "up");
+		me.input.bindKey(me.input.KEY.DOWN, "down");
 		me.input.bindKey(me.input.KEY.SPACE, "shoot", true);
 		
 		// display the menu title
@@ -89,7 +92,6 @@ var PlayScreen = (function(){
 			me.gamestat.add("health",100);
 			//spawnPoints = me.game.getEntityByName("virusSpawnPoint");
 			//console.log(spawnPoints);
-			//me.audio.playTrack("DST-InertExponent");
 			updateHeartbeat(); // kick start the heart
 			window.setTimeout(function(){me.audio.playTrack("bangthataccordion");},10000);
 		},
@@ -101,7 +103,7 @@ var PlayScreen = (function(){
 			var scorePremium = me.gamestat.getItemValue("score.premium");
 			var scoreEndurance = me.gamestat.getItemValue("endurance");
 			var scoreHealth = me.gamestat.getItemValue("health");
-			
+			var oldScoreCost = scoreCost;
 			if(++costTimer==85){
 				var randomCostIncrease = Math.random()*95;
 				scorePremium+=randomCostIncrease;
@@ -123,12 +125,18 @@ var PlayScreen = (function(){
 				ScoreBoardElements["health"].className="warning";
 			} else if(scoreHealth>10){
 				ScoreBoardElements["health"].className="danger";
-			} else {
+			} else if(scoreHealth>0){
 				ScoreBoardElements["health"].className="crisis";
+			} else {
+				me.state.change(me.state.GAME_OVER);
 			}
 			
 			ScoreBoardElements["cost"].innerHTML = "$"+Math.round(scoreCost)+".95"
 			ScoreBoardElements["premium"].innerHTML = "$"+Math.round(scorePremium)+".95"
+			if(scoreCost>4000){
+				ScoreBoardElements["status"].innerHTML = "DENIED";
+				ScoreBoardElements["status"].className = "critical";
+			}
 		},
 		/* ---
 		 action to perform when game is finished (state change)
@@ -142,7 +150,6 @@ var PlayScreen = (function(){
 })();
 //me.debug.renderHitBox = true;
 
-//bootstrap :)
 window.onReady(function() 
 {
 	jsApp.onload();
@@ -158,6 +165,7 @@ window.addEventListener("load",function(){
 		endurance:document.getElementById("enduranceCounter"),
 		health:document.getElementById("healthCounter"),
 		cost:document.getElementById("insurance.cost"),
-		premium:document.getElementById("insurance.premium")
+		premium:document.getElementById("insurance.premium"),
+		status:document.getElementById("insurance.status")
 	}
 },true);

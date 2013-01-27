@@ -35,11 +35,13 @@ var VirusEntity = FloaterEntity.extend({
 				this.collidable = false;
 				me.game.remove(this);
 				obj.flicker(30);
-				me.gamestat.setValue("health",me.gamestat.getItemValue("health")-1);
+				me.gamestat.setValue("health",me.gamestat.getItemValue("health")-10);
+				me.audio.play("sfx_whblcell_hurt");
 			}else if (obj.name=="laserentity"){
 				this.mode=this.FRIENDLY;
 				this.setCurrentAnimation("friendly");
 				me.game.remove(obj);
+				me.audio.play("crash");
 			}else if (obj.name=="whitebloodcellentity"){
 				
 			} else {
@@ -50,12 +52,14 @@ var VirusEntity = FloaterEntity.extend({
 				this.collidable = false;
 				me.gamestat.setValue("score.caught",me.gamestat.getItemValue("score.caught")+1);
 				me.game.remove(this);
+				me.audio.play("sfx_gerbil_yay_2");
 			}else if (obj.name=="laserentity"){
 				this.collidable=false;
 				this.flicker(30,function(){
 					me.game.remove(this);
 				});
 				me.game.remove(obj);
+				me.audio.play("crash");
 			}else if (obj.name=="whitebloodcellentity"){
 				
 			} else {
@@ -67,7 +71,7 @@ var VirusEntity = FloaterEntity.extend({
 	
 	update: function(){
 		//console.log( this.visible, this.pos.x, me.game.viewport.pos.x );
-		if (this.pos.x < me.game.viewport.pos.x) {
+		if (this.pos.x < me.game.viewport.pos.x-me.game.viewport.width) {
 			// offscreen to the left: teleport
 			this.pos.x = me.game.viewport.pos.x + me.game.viewport.width + 100;
 			//console.log('teleport');

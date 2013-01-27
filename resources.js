@@ -21,12 +21,7 @@ var g_resources= [
 {
 	name: "guinea_pig",
 	type: "image",
-	src: "data/tiles/guinea_pig.png"
-},
-{
-	name: "gripe_run_right",
-	type: "image",
-	src: "data/sprite/gripe_run_right.png"
+	src: "data/sprite/gpig_sprite.png"
 },
 {
 	name: "virusEntity",   //this matches the "image" property value for an object in tiled
@@ -183,6 +178,12 @@ var g_resources= [
 	type: "audio",
 	src:  "data/audio/",
 	channel: 1,
+},
+{
+	name: "crash",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 5,
 },
 ];
 

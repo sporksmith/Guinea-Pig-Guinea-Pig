@@ -77,7 +77,7 @@ var FloaterEntity = me.ObjectEntity.extend({
 		if(collision.x!=0||collision.y!=0){
 			//console.log("a collision map hit occurred - vel.x: "+this.vel.x+" vel.y: "+this.vel.y);
 			if(collision.y!=0){
-				this.vel.y *= -0.75;
+				this.vel.y *= -3;
 			}
 
 			if (this.name == 'mainplayer') {

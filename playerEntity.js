@@ -9,14 +9,21 @@ var PlayerEntity = FloaterEntity.extend({
 	endurance: 1000,
 	forcedmovement:false,
 	direction:1,
-	init: function(x, y, settings) {
+	init: function(x, y, settings) 
+	{
+		if(!settings){
+			settings={};
+		}
+		settings.image = "guinea_pig";
+		settings.spritewidth = 116;
+		settings.spriteheight = 74;
 		// call the constructor
 		this.parent(x, y, settings);
  
 		// this actually sets the default acceleration values
-		this.setVelocity(1, 5);
+		this.setVelocity(1, 1);
 		//set max velocity
-		this.setMaxVelocity(5,20);
+		this.setMaxVelocity(5,3);
 		this.setFriction(0.02,0.02);
 
 		// define collision rectangle within sprite
@@ -99,13 +106,18 @@ var PlayerEntity = FloaterEntity.extend({
 			moved=true;
 
 		}
-		if (me.input.isKeyPressed('shoot')){
+		if (me.input.isKeyPressed('shoot') && this.endurance > 7){
 			var laserEntity = new LaserEntity(this.pos.x+20, this.pos.y+5);
 			laserEntity.accel.x = 20;
 			laserEntity.vel.x = this.direction==-1?-20:20;
 			laserEntity.vel.y = 0;
 			me.game.add(laserEntity,3);
 			me.game.sort();
+			this.endurance-=8;
+			moved=true
+		}
+		if(this.endurance < 0){
+			this.endurance = 0;
 		}
 		if(this.endurance<this.max_endurance&&!moved){
 			this.endurance = this.endurance + 10;
