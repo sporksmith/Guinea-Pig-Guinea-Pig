@@ -133,9 +133,11 @@ var PlayScreen = (function(){
 			} else if(scoreHealth>0){
 				ScoreBoardElements["health"].className="crisis";
 			} else {
+			*/
+
+			if (scoreHealth <= 0) {
 				me.state.change(me.state.GAME_OVER);
 			}
-			*/
 			
 			ScoreBoardElements["caught"].innerHTML = scoreCaught;
 			ScoreBoardElements["cost"].innerHTML = "$"+Math.round(scoreCost)+".95"
