@@ -66,7 +66,14 @@ var VirusEntity = FloaterEntity.extend({
 	},
 	
 	update: function(){
+		//console.log( this.visible, this.pos.x, me.game.viewport.pos.x );
+		if (this.pos.x < me.game.viewport.pos.x) {
+			// offscreen to the left: teleport
+			this.pos.x = me.game.viewport.pos.x + me.game.viewport.width + 100;
+			//console.log('teleport');
+		}
 		if (!this.isFlickering()&&this.pos.x + this.vel.x > me.game.currentLevel.realwidth - this.width){
+			// off-level to the right: destroy
 			this.flicker(30,function(){
 				me.game.remove(this);
 			})
