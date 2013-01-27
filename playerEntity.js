@@ -9,7 +9,14 @@ var PlayerEntity = FloaterEntity.extend({
 	endurance: 1000,
 	forcedmovement:false,
 	direction:1,
-	init: function(x, y, settings) {
+	init: function(x, y, settings) 
+	{
+		if(!settings){
+			settings={};
+		}
+		settings.image = "guinea_pig";
+		settings.spritewidth = 116;
+		settings.spriteheight = 74;
 		// call the constructor
 		this.parent(x, y, settings);
  

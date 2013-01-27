@@ -10,7 +10,7 @@ var WinScreen = me.ScreenObject.extend(
 		this.scrollerfont  =  null;
 		this.scrollertween = null;
 		
-		this.scroller = "EVERY NEW PROCEDURE NEEDS A GUINEA PIG";
+		this.scroller = "THE OPERATION WAS A SUCCESS!";
 		this.scrollerpos = 600;
 	},
 	/* ---
@@ -32,10 +32,12 @@ var WinScreen = me.ScreenObject.extend(
 		this.scrollerpos = 1024;
 		
 		// a tween to animate the arrow
-		this.scrollertween = new me.Tween(this).to({scrollerpos: -2200 }, 10000).onComplete(this.scrollover.bind(this)).start();
+		this.scrollertween = new me.Tween(this)
+				.to({scrollerpos: -2200 }, 10000)
+				.onComplete(this.scrollover.bind(this)).start();
 		
 		// enable the keyboard
-		me.input.bindKey(me.input.KEY.ENTER, "enter", true);
+		//me.input.bindKey(me.input.KEY.ENTER, "enter", true);
 	},
 	
 	
@@ -72,7 +74,7 @@ var WinScreen = me.ScreenObject.extend(
 	{
 		context.drawImage(this.title, 0,0);
 		
-		this.font.draw (context, "PRESS ENTER TO PLAY",	 200, 768/2);
+		this.font.draw (context, "CONGRATULATIONS!", 250, 768/2);
 		this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 768-200);
 	},
 	

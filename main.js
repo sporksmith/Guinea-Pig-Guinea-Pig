@@ -38,6 +38,7 @@ var jsApp = {
 	 
 		// set the "Play/Ingame" Screen Object
 		me.state.set(me.state.PLAY, new PlayScreen());
+		me.state.set(me.state.GAME_END, new WinScreen());
 	 
 		// set a global fading transition for the screen
 		me.state.transition("fade", "#FFFFFF", 250);
@@ -48,6 +49,7 @@ var jsApp = {
 		me.entityPool.add("virusEntity", VirusEntity);
 		me.entityPool.add("virusSpawnPoint", VirusSpawnPoint);
 		me.entityPool.add("whiteBloodCellSpawnPoint", WhiteBloodCellSpawnPoint);
+		me.entityPool.add("winTransitionPoint", WinTransitionPoint);
 		me.entityPool.add("laserEntity", LaserEntity);
 		
 		// enable the keyboard
