@@ -114,6 +114,10 @@ var PlayerEntity = FloaterEntity.extend({
 			me.game.add(laserEntity,3);
 			me.game.sort();
 			this.endurance-=8;
+			moved=true
+		}
+		if(this.endurance < 0){
+			this.endurance = 0;
 		}
 		if(this.endurance<this.max_endurance&&!moved){
 			this.endurance = this.endurance + 10;
