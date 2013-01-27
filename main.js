@@ -73,7 +73,6 @@ var PlayScreen = (function(){
 	{
 		init: function(){
 			this.parent(true);
-			updateHeartbeat();
 		},
 		onResetEvent: function() {	
 			// stuff to reset on state change
@@ -90,6 +89,7 @@ var PlayScreen = (function(){
 			//spawnPoints = me.game.getEntityByName("virusSpawnPoint");
 			//console.log(spawnPoints);
 			//me.audio.playTrack("DST-InertExponent");
+			updateHeartbeat(); // kick start the heart
 		},
 		update: function(){
 			/*
