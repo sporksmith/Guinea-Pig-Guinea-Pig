@@ -98,5 +98,91 @@ var g_resources= [
 	src:  "data/audio/",
 	channel: 1,
 },
+{
+	name: "sfx_gerbil_bounce_1",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 2,
+},
+{
+	name: "sfx_gerbil_bounce_2",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 2,
+},
+{
+	name: "sfx_gerbil_chomp_1",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 1,
+},
+{
+	name: "sfx_gerbil_chomp_2",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 1,
+},
+{
+	name: "sfx_gerbil_laser_1",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 5,
+},
+	/*
+{
+	name: "sfx_gerbil_laser_2",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 5,
+},
+*/
+{
+	name: "sfx_gerbil_squeal_1",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 1,
+},
+{
+	name: "sfx_gerbil_squeal_2",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 1,
+},
+{
+	name: "sfx_gerbil_yay_1",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 1,
+},
+{
+	name: "sfx_gerbil_yay_2",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 1,
+},
+{
+	name: "sfx_whblcell_hurt",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 1,
+},
+{
+	name: "sfx_whblcell_hurt_2",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 1,
+},
+{
+	name: "sfx_whblcell_success_1",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 1,
+},
+{
+	name: "sfx_whblcell_success_2",
+	type: "audio",
+	src:  "data/audio/",
+	channel: 1,
+},
 ];
 

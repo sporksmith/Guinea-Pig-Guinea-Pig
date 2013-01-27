@@ -100,7 +100,7 @@ var PlayerEntity = FloaterEntity.extend({
 
 		}
 		if (me.input.isKeyPressed('shoot')){
-			var laserEntity = new LaserEntity(this.pos.x, this.pos.y);
+			var laserEntity = new LaserEntity(this.pos.x+20, this.pos.y+5);
 			laserEntity.accel.x = 20;
 			laserEntity.vel.x = this.direction==-1?-20:20;
 			laserEntity.vel.y = 0;
@@ -120,6 +120,7 @@ var PlayerEntity = FloaterEntity.extend({
 			//console.log("collision detected!");
 			//console.log(res);
 		}
+		var collideEntity = this.parent(this);
 		return this.parent(this);
 	}
  
