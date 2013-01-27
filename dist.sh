@@ -5,12 +5,12 @@ cp -r *.js lib data dist/src
 
 mkdir -p dist/release
 cp -r *.js lib data dist/release
-#FIXME cp README.txt dist/release
+cp README.txt dist/release
 
 mkdir -p dist/press
-cp other/team-photo.jpg dist/press
+cp other/team-photo.jpg dist/press/press.jpg
 
 mkdir -p dist/other
 
-#FIXME cp license.txt
+cp license.txt dist/
 
