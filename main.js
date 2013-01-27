@@ -97,7 +97,7 @@ var PlayScreen = (function(){
 			//spawnPoints = me.game.getEntityByName("virusSpawnPoint");
 			//console.log(spawnPoints);
 			updateHeartbeat(); // kick start the heart
-			window.setTimeout(function(){me.audio.playTrack("bangthataccordion");},10000);
+			window.setTimeout(function(){me.audio.playTrack("bangthataccordion");},5000);
 		},
 		update: function(){
 			var scoreCaught = me.gamestat.getItemValue("score.caught");
