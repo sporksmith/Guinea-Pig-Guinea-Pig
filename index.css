@@ -1,23 +1,24 @@
 /*index.css*/
 body{
-	background-color:#000000;
-	color:white;
+	background-color:rgb(54,6,6);
+	color:black;
 }
 #jsapp{
 	width:1024px;
 	float:left;
-	border: 2px white solid;
+	border: 2px gray solid;
 	border-radius: 5px 5px 5px 5px;
 }
 #stats{
 	float:left;
-	color:white;
+	color:black;
 	margin-left: 10px;
 }
 #healthometer, #insuranceometer{
-	border: 2px white solid;
+	border: 2px navy solid;
 	-webkit-border-radius: 5px 5px 5px 5px;
 	margin-bottom: 10px;
+	background-color: #FCFCFC;
 }
 #stats h1, #stats h2, #stats h3{
 	font-weight: bold;
@@ -27,6 +28,9 @@ body{
 	padding-bottom: 2px;
 	padding-left: 10px;
 	padding-right: 10px;
+}
+#stats h1 {
+	color: navy;
 }
 #stats h1{
 	font-size: 14pt;

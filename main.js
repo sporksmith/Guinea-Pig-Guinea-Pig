@@ -101,7 +101,7 @@ var PlayScreen = (function(){
 			var scorePremium = me.gamestat.getItemValue("score.premium");
 			var scoreEndurance = me.gamestat.getItemValue("endurance");
 			var scoreHealth = me.gamestat.getItemValue("health");
-			
+			var oldScoreCost = scoreCost;
 			if(++costTimer==85){
 				var randomCostIncrease = Math.random()*95;
 				scorePremium+=randomCostIncrease;
@@ -129,6 +129,10 @@ var PlayScreen = (function(){
 			
 			ScoreBoardElements["cost"].innerHTML = "$"+Math.round(scoreCost)+".95"
 			ScoreBoardElements["premium"].innerHTML = "$"+Math.round(scorePremium)+".95"
+			if(scoreCost>4000){
+				ScoreBoardElements["status"].innerHTML = "DENIED";
+				ScoreBoardElements["status"].className = "critical";
+			}
 		},
 		/* ---
 		 action to perform when game is finished (state change)
@@ -158,6 +162,7 @@ window.addEventListener("load",function(){
 		endurance:document.getElementById("enduranceCounter"),
 		health:document.getElementById("healthCounter"),
 		cost:document.getElementById("insurance.cost"),
-		premium:document.getElementById("insurance.premium")
+		premium:document.getElementById("insurance.premium"),
+		status:document.getElementById("insurance.status")
 	}
 },true);
