@@ -30,7 +30,7 @@ var WhiteBloodCellEntity = FloaterEntity.extend({
 			this.collidable = false;
 			me.game.remove(this);
 		}else{
-			console.log("white blood cell collided with "+obj.name);
+			//console.log("white blood cell collided with "+obj.name);
 		}
 	},
 	
