@@ -109,6 +109,9 @@ var PlayerEntity = FloaterEntity.extend({
 		}
 		if(this.endurance<this.max_endurance&&!moved){
 			this.endurance = this.endurance + 10;
+			if(this.endurance > this.max_endurance){
+				this.endurance = this.max_endurance;
+			}
 		}
 		me.gamestat.setValue("endurance",this.endurance);
 		// check for collision
