@@ -51,7 +51,7 @@ var LaserEntity = me.ObjectEntity.extend({
 		// check for collision
 		var map_collision = this.collisionMap.checkCollision(this.collisionBox, this.vel);
 		if (map_collision && map_collision.xtile) {
-			console.log(map_collision);
+			//console.log(map_collision);
 			me.game.remove(this);
 		}
 
