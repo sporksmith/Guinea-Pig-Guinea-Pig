@@ -21,7 +21,6 @@ VirusSpawnPoint = me.InvisibleEntity.extend(
 				// sort the object list (to ensure the object is properly displayed)
 				me.game.sort();
 				this.resetSpawnTimer();
-				console.log('spawn');
 			}
 		}
 		
