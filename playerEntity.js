@@ -21,9 +21,9 @@ var PlayerEntity = FloaterEntity.extend({
 		this.parent(x, y, settings);
  
 		// this actually sets the default acceleration values
-		this.setVelocity(1, 5);
+		this.setVelocity(1, 1);
 		//set max velocity
-		this.setMaxVelocity(5,20);
+		this.setMaxVelocity(5,3);
 		this.setFriction(0.02,0.02);
 
 		// define collision rectangle within sprite
