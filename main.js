@@ -91,6 +91,7 @@ var PlayScreen = (function(){
 			//console.log(spawnPoints);
 			//me.audio.playTrack("DST-InertExponent");
 			updateHeartbeat(); // kick start the heart
+			me.audio.playTrack("bangthataccordion");
 		},
 		update: function(){
 			var scoreCaught = me.gamestat.getItemValue("score.caught");
@@ -123,7 +124,7 @@ var PlayScreen = (function(){
 		onDestroyEvent: function() {
 			// remove the HUD
 			//me.game.disableHUD();
-			//me.audio.stopTrack();
+			me.audio.stopTrack();
 		}
 	});
 })();
