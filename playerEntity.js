@@ -89,12 +89,20 @@ var PlayerEntity = FloaterEntity.extend({
 				if (this.vel.y < -1*this.maxVel.y){
 					this.vel.y=-1*this.maxVel.y;
 				}
-				console.log("move up result: velY: "+this.vel.y+" tick: "+me.timer.tick);
+				//console.log("move up result: velY: "+this.vel.y+" tick: "+me.timer.tick);
 				moved=true;
 				this.endurance-=3;
 			}
 			moved=true;
 
+		}
+		if (me.input.isKeyPressed('shoot')){
+			var laserEntity = new LaserEntity(this.pos.x, this.pos.y);
+			laserEntity.accel.x = 20;
+			laserEntity.vel.x = this.vel.x<0?-20:20;
+			laserEntity.vel.y = 0;
+			me.game.add(laserEntity,3);
+			me.game.sort();
 		}
 		if(this.endurance<this.max_endurance&&!moved){
 			this.endurance = this.endurance + 10;

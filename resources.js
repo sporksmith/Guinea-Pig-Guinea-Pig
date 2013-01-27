@@ -33,6 +33,11 @@ var g_resources= [
 	type: "image",
 	src: "data/sprite/white_blood_cell.png"
 },
+{
+	name:"laserEntity",
+	type: "image",
+	src:"data/sprite/tmplaser.png"
+},
 // the parallax background
 {
 	name: "background",

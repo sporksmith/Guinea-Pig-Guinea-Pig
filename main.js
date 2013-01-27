@@ -48,12 +48,14 @@ var jsApp = {
 		me.entityPool.add("virusEntity", VirusEntity);
 		me.entityPool.add("virusSpawnPoint", VirusSpawnPoint);
 		me.entityPool.add("whiteBloodCellSpawnPoint", WhiteBloodCellSpawnPoint);
+		me.entityPool.add("laserEntity", LaserEntity);
 		
 		// enable the keyboard
 		me.input.bindKey(me.input.KEY.LEFT, "left");
 		me.input.bindKey(me.input.KEY.RIGHT, "right");
 		me.input.bindKey(me.input.KEY.UP, "up", true);
 		me.input.bindKey(me.input.KEY.DOWN, "down", true);
+		me.input.bindKey(me.input.KEY.SPACE, "shoot", true);
 		
 		// display the menu title
 		me.state.change(me.state.MENU);
