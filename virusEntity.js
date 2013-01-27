@@ -51,6 +51,7 @@ var VirusEntity = FloaterEntity.extend({
 			if(obj.name=="mainplayer"){
 				this.collidable = false;
 				me.gamestat.setValue("score.caught",me.gamestat.getItemValue("score.caught")+1);
+				me.gamestat.setValue("health",me.gamestat.getItemValue("health")+5);
 				me.game.remove(this);
 				me.audio.play("sfx_gerbil_yay_2");
 			}else if (obj.name=="laserentity"){
