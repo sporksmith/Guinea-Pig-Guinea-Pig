@@ -79,6 +79,15 @@ var FloaterEntity = me.ObjectEntity.extend({
 			if(collision.y!=0){
 				this.vel.y *= -0.75;
 			}
+
+			if (this.name == 'mainplayer') {
+				if (Math.random() > .5) {
+					me.audio.play("sfx_gerbil_bounce_1");
+				} else {
+					me.audio.play("sfx_gerbil_bounce_2");
+				}
+			}
+
 		}
 		if (this.vel.x!=0 || this.vel.y!=0) {
 			// update objet animation
