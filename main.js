@@ -116,7 +116,8 @@ var PlayScreen = (function(){
 			}
 			me.gamestat.setValue("score.cost",scoreCost);
 			me.gamestat.setValue("score.premium",scorePremium);
-			ScoreBoardElements["caught"].innerHTML = scoreCaught;
+
+			/*
 			ScoreBoardElements["destroyed"].innerHTML = scoreDestroyed;
 			ScoreBoardElements["escaped"].innerHTML = scoreEscaped;
 			ScoreBoardElements["endurance"].innerHTML = scoreEndurance;
@@ -134,7 +135,9 @@ var PlayScreen = (function(){
 			} else {
 				me.state.change(me.state.GAME_OVER);
 			}
+			*/
 			
+			ScoreBoardElements["caught"].innerHTML = scoreCaught;
 			ScoreBoardElements["cost"].innerHTML = "$"+Math.round(scoreCost)+".95"
 			ScoreBoardElements["premium"].innerHTML = "$"+Math.round(scorePremium)+".95"
 			if(scoreCost>4000){
@@ -151,15 +154,18 @@ var PlayScreen = (function(){
 			me.audio.stopTrack();
 		},
 		repeat : function(s, count) { // this is a general utility. should probably be elsewhere :P
+			if (count <= 0) {
+				return "";
+			}
 			return (new Array(count + 1)).join(s);
 		},
 		draw : function(context)
 		{
 			var scoreHealth = me.gamestat.getItemValue("health");
-			this.font.draw (context, this.repeat("I", Math.floor(scoreHealth/5)), me.game.viewport.pos.x, 0);
+			this.font.draw (context, "HEALTH:   " + this.repeat("I", Math.floor(scoreHealth/5)), me.game.viewport.pos.x, 0);
 
 			var scoreEndurance = me.gamestat.getItemValue("endurance");
-			this.font.draw (context, this.repeat("I", Math.floor(scoreEndurance/50)), me.game.viewport.pos.x, 20);
+			this.font.draw (context, "STRENGTH: " + this.repeat("I", Math.floor(scoreEndurance/50)), me.game.viewport.pos.x, 20);
 		}
 	});
 })();
