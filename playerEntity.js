@@ -8,6 +8,7 @@ var PlayerEntity = FloaterEntity.extend({
 	max_endurance:1000,
 	endurance: 1000,
 	forcedmovement:false,
+	direction:1,
 	init: function(x, y, settings) {
 		// call the constructor
 		this.parent(x, y, settings);
@@ -48,6 +49,7 @@ var PlayerEntity = FloaterEntity.extend({
 			console.log(me.timer.tick);
 			// face left
 			this.flipX(true);
+			this.direction=-1;
 			// update the entity velocity
 			if(this.endurance-10>0){
 				this.vel.x -= this.accel.x * me.timer.tick;
@@ -58,6 +60,7 @@ var PlayerEntity = FloaterEntity.extend({
 		} else if (me.input.isKeyPressed('right')||(gamepad&&gamepad.axes[0]==1)) {
 			// face right
 			this.flipX(false);
+			this.direction=1;
 			// update the entity velocity
 			if(this.endurance-5>0){
 				this.vel.x += this.accel.x * me.timer.tick;
@@ -99,7 +102,7 @@ var PlayerEntity = FloaterEntity.extend({
 		if (me.input.isKeyPressed('shoot')){
 			var laserEntity = new LaserEntity(this.pos.x, this.pos.y);
 			laserEntity.accel.x = 20;
-			laserEntity.vel.x = this.vel.x<0?-20:20;
+			laserEntity.vel.x = this.direction==-1?-20:20;
 			laserEntity.vel.y = 0;
 			me.game.add(laserEntity,3);
 			me.game.sort();
