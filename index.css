@@ -39,4 +39,24 @@ body{
 	font-size: 10pt;
 	text-align: right;
 }
-
+#stats .caution{
+	color: yellow;
+	font-size: 10pt;
+}
+#stats .warning{
+	color: orange;
+	font-weight: bold;
+	font-size: 11pt;
+}
+#stats .danger{
+	color: red;
+	font-weight: bold;
+	font-size: 12pt;
+}
+#stats .crisis{
+	color: fuchsia;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 14pt;
+	text-decoration: blink;
+}
