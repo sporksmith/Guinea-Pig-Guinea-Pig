@@ -71,7 +71,7 @@ var VirusEntity = FloaterEntity.extend({
 	
 	update: function(){
 		//console.log( this.visible, this.pos.x, me.game.viewport.pos.x );
-		if (this.pos.x < me.game.viewport.pos.x) {
+		if (this.pos.x < me.game.viewport.pos.x-me.game.viewport.width) {
 			// offscreen to the left: teleport
 			this.pos.x = me.game.viewport.pos.x + me.game.viewport.width + 100;
 			//console.log('teleport');
