@@ -126,14 +126,16 @@ var g_resources= [
 	name: "sfx_gerbil_laser_1",
 	type: "audio",
 	src:  "data/audio/",
-	channel: 1,
+	channel: 5,
 },
+	/*
 {
 	name: "sfx_gerbil_laser_2",
 	type: "audio",
 	src:  "data/audio/",
-	channel: 1,
+	channel: 5,
 },
+*/
 {
 	name: "sfx_gerbil_squeal_1",
 	type: "audio",

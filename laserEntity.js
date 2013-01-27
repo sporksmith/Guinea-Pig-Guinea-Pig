@@ -22,6 +22,8 @@ var LaserEntity = me.ObjectEntity.extend({
 		this.vel.x = 20;
 		this.vel.y = 0;
 		//console.log(this);
+		//
+		me.audio.play("sfx_gerbil_laser_1");
 	},
 	// this function is called by the engine, when
 	// an object is touched by something (here collected)
