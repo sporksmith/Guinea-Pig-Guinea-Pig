@@ -41,6 +41,7 @@ var VirusEntity = FloaterEntity.extend({
 				this.mode=this.FRIENDLY;
 				this.setCurrentAnimation("friendly");
 				me.game.remove(obj);
+				me.audio.play("crash");
 			}else if (obj.name=="whitebloodcellentity"){
 				
 			} else {
@@ -58,6 +59,7 @@ var VirusEntity = FloaterEntity.extend({
 					me.game.remove(this);
 				});
 				me.game.remove(obj);
+				me.audio.play("crash");
 			}else if (obj.name=="whitebloodcellentity"){
 				
 			} else {
