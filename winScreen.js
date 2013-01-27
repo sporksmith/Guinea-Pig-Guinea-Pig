@@ -20,7 +20,7 @@ var WinScreen = me.ScreenObject.extend(
 	onResetEvent : function()
 	{
 		if (this.title == null) {
-			this.title = me.loader.getImage("title_screen");
+			this.title = me.loader.getImage("win_screen");
 			this.font = new me.BitmapFont("32x32_font", 32);
 			this.font.set("left");
 			

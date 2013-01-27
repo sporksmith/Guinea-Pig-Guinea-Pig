@@ -20,7 +20,7 @@ var LoseScreen = me.ScreenObject.extend(
 	onResetEvent : function()
 	{
 		if (this.title == null) {
-			this.title = me.loader.getImage("title_screen");
+			this.title = me.loader.getImage("lose_screen");
 			this.font = new me.BitmapFont("32x32_font", 32);
 			this.font.set("left");
 			

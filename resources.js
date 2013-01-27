@@ -81,6 +81,16 @@ var g_resources= [
 	src: "data/tiles/front_screen.png"
 },
 {
+	name: "win_screen",
+	type:"image",
+	src: "data/tiles/win_screen.png"
+},
+{
+	name: "lose_screen",
+	type:"image",
+	src: "data/tiles/lose_screen.png"
+},
+{
 	name: "ba",
 	type: "audio",
 	src:  "data/audio/",
