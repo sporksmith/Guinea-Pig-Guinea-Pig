@@ -51,7 +51,7 @@ var VirusEntity = FloaterEntity.extend({
 				this.collidable = false;
 				me.gamestat.setValue("score.caught",me.gamestat.getItemValue("score.caught")+1);
 				me.game.remove(this);
-				me.audio.play("sfx_gerbil_chomp_1");
+				me.audio.play("sfx_gerbil_yay_2");
 			}else if (obj.name=="laserentity"){
 				this.collidable=false;
 				this.flicker(30,function(){
