@@ -25,5 +25,5 @@ function updateHeartbeat(){
 	window.setTimeout(updateHeartbeat, timeout);
 }
 //updateHeartbeat();
-window.setTimeout(updateHeartbeat,1500);
+//window.setTimeout(updateHeartbeat,1500);
 
