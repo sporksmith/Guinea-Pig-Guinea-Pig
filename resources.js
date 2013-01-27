@@ -79,13 +79,13 @@ var g_resources= [
 	name: "ba",
 	type: "audio",
 	src:  "data/audio/",
-	channel: 1,
+	channel: 2,
 },
 {
 	name: "bum",
 	type: "audio",
 	src:  "data/audio/",
-	channel: 1,
+	channel: 2,
 },
 ];
 

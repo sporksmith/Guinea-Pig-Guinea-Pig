@@ -73,6 +73,7 @@ var PlayScreen = (function(){
 	{
 		init: function(){
 			this.parent(true);
+			updateHeartbeat();
 		},
 		onResetEvent: function() {	
 			// stuff to reset on state change
