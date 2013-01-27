@@ -39,6 +39,7 @@ var jsApp = {
 		// set the "Play/Ingame" Screen Object
 		me.state.set(me.state.PLAY, new PlayScreen());
 		me.state.set(me.state.GAME_END, new WinScreen());
+		me.state.set(me.state.GAME_OVER, new LoseScreen());
 	 
 		// set a global fading transition for the screen
 		me.state.transition("fade", "#FFFFFF", 250);
@@ -91,7 +92,6 @@ var PlayScreen = (function(){
 			me.gamestat.add("health",100);
 			//spawnPoints = me.game.getEntityByName("virusSpawnPoint");
 			//console.log(spawnPoints);
-			//me.audio.playTrack("DST-InertExponent");
 			updateHeartbeat(); // kick start the heart
 			window.setTimeout(function(){me.audio.playTrack("bangthataccordion");},10000);
 		},
@@ -125,8 +125,10 @@ var PlayScreen = (function(){
 				ScoreBoardElements["health"].className="warning";
 			} else if(scoreHealth>10){
 				ScoreBoardElements["health"].className="danger";
-			} else {
+			} else if(scoreHealth>0){
 				ScoreBoardElements["health"].className="crisis";
+			} else {
+				me.state.change(me.state.GAME_OVER);
 			}
 			
 			ScoreBoardElements["cost"].innerHTML = "$"+Math.round(scoreCost)+".95"
@@ -148,7 +150,6 @@ var PlayScreen = (function(){
 })();
 //me.debug.renderHitBox = true;
 
-//bootstrap :)
 window.onReady(function() 
 {
 	jsApp.onload();
