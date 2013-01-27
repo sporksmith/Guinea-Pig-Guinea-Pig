@@ -17,7 +17,7 @@ var TitleScreen = me.ScreenObject.extend(
 		this.scrollertween = null;
 		
 		this.scroller = "EVERY NEW PROCEDURE NEEDS A GUINEA PIG";
-		this.scrollerpos = 600;
+		this.scrollerpos = 950;
 	},
 	/* ---
 		reset function
@@ -82,8 +82,8 @@ var TitleScreen = me.ScreenObject.extend(
 	{
 		context.drawImage(this.title, 0,0);
 		
-		this.font.draw (context, "PRESS ENTER TO PLAY",	 200, 768/2);
-		this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 768-200);
+		this.font.draw (context, "PRESS ENTER TO PLAY",	 200, 700);
+		this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 5);
 	},
 	
 	/*---

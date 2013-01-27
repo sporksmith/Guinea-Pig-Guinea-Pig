@@ -78,7 +78,7 @@ var g_resources= [
 {
 	name: "title_screen",
 	type:"image",
-	src: "data/GUI/title_screen.png"
+	src: "data/tiles/front_screen.png"
 },
 {
 	name: "ba",
